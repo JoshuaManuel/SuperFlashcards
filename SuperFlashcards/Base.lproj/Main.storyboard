@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,13 +20,29 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="7rF-il-8Ij">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="setTitleCell" id="7rF-il-8Ij" customClass="SetTitleCell" customModule="SuperFlashcards" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7rF-il-8Ij" id="kDp-Qs-Zqe">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QX-lD-x9C">
+                                            <rect key="frame" x="29" y="11" width="91" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1QX-lD-x9C" firstAttribute="leading" secondItem="kDp-Qs-Zqe" secondAttribute="leadingMargin" constant="13" id="Hkt-dE-yNZ"/>
+                                        <constraint firstItem="1QX-lD-x9C" firstAttribute="top" secondItem="kDp-Qs-Zqe" secondAttribute="topMargin" id="dR7-Bn-XMe"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1QX-lD-x9C" secondAttribute="bottom" constant="1" id="wKv-57-Qd9"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="setTitleLabel" destination="1QX-lD-x9C" id="BhG-0v-mPm"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -47,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1c7-Rb-Uxs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="-370"/>
+            <point key="canvasLocation" x="32.799999999999997" y="-370.16491754122939"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="STK-6g-Idp">
@@ -117,8 +134,6 @@
         <!--Add New Set-->
         <scene sceneID="FdD-5c-HKM">
             <objects>
-                <exit id="u7v-Sb-BdT" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Dy-w8-fjW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Wx0-LC-qiH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jL9-2f-a4d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -159,6 +174,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add New Set" id="VqG-6S-fp4"/>
                 </viewController>
+                <exit id="u7v-Sb-BdT" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Dy-w8-fjW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="813.60000000000002" y="-370.16491754122939"/>
         </scene>

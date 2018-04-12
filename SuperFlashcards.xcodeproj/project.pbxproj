@@ -13,6 +13,8 @@
 		030DF63020703CAE00449B08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030DF62F20703CAE00449B08 /* Assets.xcassets */; };
 		030DF63320703CAE00449B08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030DF63120703CAE00449B08 /* LaunchScreen.storyboard */; };
 		030DF63D207049A400449B08 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030DF63C207049A400449B08 /* BrowseViewController.swift */; };
+		03DC5FBE207FD07E00D76DED /* SetTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC5FBD207FD07E00D76DED /* SetTitleCell.swift */; };
+		03DC5FC4207FE25E00D76DED /* CardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC5FC3207FE25E00D76DED /* CardSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		030DF63220703CAE00449B08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		030DF63420703CAE00449B08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		030DF63C207049A400449B08 /* BrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
+		03DC5FBD207FD07E00D76DED /* SetTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTitleCell.swift; sourceTree = "<group>"; };
+		03DC5FC3207FE25E00D76DED /* CardSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +61,11 @@
 			isa = PBXGroup;
 			children = (
 				030DF63C207049A400449B08 /* BrowseViewController.swift */,
+				03DC5FC3207FE25E00D76DED /* CardSet.swift */,
 				030DF62820703CAE00449B08 /* AppDelegate.swift */,
 				030DF62A20703CAE00449B08 /* ViewController.swift */,
 				030DF62C20703CAE00449B08 /* Main.storyboard */,
+				03DC5FBD207FD07E00D76DED /* SetTitleCell.swift */,
 				030DF62F20703CAE00449B08 /* Assets.xcassets */,
 				030DF63120703CAE00449B08 /* LaunchScreen.storyboard */,
 				030DF63420703CAE00449B08 /* Info.plist */,
@@ -142,6 +148,8 @@
 				030DF63D207049A400449B08 /* BrowseViewController.swift in Sources */,
 				030DF62B20703CAE00449B08 /* ViewController.swift in Sources */,
 				030DF62920703CAE00449B08 /* AppDelegate.swift in Sources */,
+				03DC5FC4207FE25E00D76DED /* CardSet.swift in Sources */,
+				03DC5FBE207FD07E00D76DED /* SetTitleCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
