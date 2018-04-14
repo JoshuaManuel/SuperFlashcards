@@ -10,21 +10,38 @@ import UIKit
 
 class BrowseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
+    @IBOutlet var tableView: UITableView!
+    
+    
     //Initial population
     var list: [CardSet] = []
     
-    //let list = ["Astronomy Final", "iOS Programming Final", "Biology Midterm"]
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (list.count)
+        return list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        cell.textLabel?.text = list[indexPath.row].name
         
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "browseCell")
+        cell?.textLabel?.text = list[indexPath.row].name
+        
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "BrowseToStudy", sender: list[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "BrowseToStudy"
+        {
+            if let destinationVC = segue.destination as? StudyViewController {
+                destinationVC.cardSet = sender as! CardSet
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -32,26 +49,20 @@ class BrowseViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
         // Do any additional setup after loading the view.
         list.append(CardSet("Astronomy Final"))
+        list[0].addCard(key: "Hello", value: "My Dudes")
+        list[0].addCard(key: "It's such a", value: "beautiful day")
         list.append(CardSet("iOS Programming"))
         list.append(CardSet("Biology Midterm"))
     }
 
+    @IBAction func unwindToVC(segue: UIStoryboardSegue) {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func unwindToVC(segue: UIStoryboardSegue) {
-        
-    }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
