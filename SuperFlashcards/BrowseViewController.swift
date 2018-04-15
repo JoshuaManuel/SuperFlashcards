@@ -55,7 +55,16 @@ class BrowseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         list.append(CardSet("Biology Midterm"))
     }
 
-    @IBAction func unwindToVC(segue: UIStoryboardSegue) {
+    @IBAction func unwindToBrowseFinish(segue: UIStoryboardSegue) {
+        if let origin = segue.source as? AddSetViewController {
+            print("in the unwind function")
+            let setName = origin.setName
+            // Do something with the data
+            print (setName!)
+        }
+    }
+    
+    @IBAction func unwindToBrowseCancel(segue: UIStoryboardSegue) {
         
     }
     

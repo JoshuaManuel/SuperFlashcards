@@ -17,6 +17,8 @@
 		03DC5FC4207FE25E00D76DED /* CardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC5FC3207FE25E00D76DED /* CardSet.swift */; };
 		03FFADD82082C99900F976B3 /* StudyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FFADD72082C99900F976B3 /* StudyCollectionViewCell.swift */; };
 		03FFADDA2082C9E100F976B3 /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FFADD92082C9E100F976B3 /* StudyViewController.swift */; };
+		03FFADDC2083E67300F976B3 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FFADDB2083E67300F976B3 /* AddCardViewController.swift */; };
+		03FFADDE2083F23600F976B3 /* AddSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FFADDD2083F23600F976B3 /* AddSetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		03DC5FC3207FE25E00D76DED /* CardSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSet.swift; sourceTree = "<group>"; };
 		03FFADD72082C99900F976B3 /* StudyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyCollectionViewCell.swift; sourceTree = "<group>"; };
 		03FFADD92082C9E100F976B3 /* StudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
+		03FFADDB2083E67300F976B3 /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
+		03FFADDD2083F23600F976B3 /* AddSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +70,12 @@
 			children = (
 				030DF63C207049A400449B08 /* BrowseViewController.swift */,
 				03FFADD92082C9E100F976B3 /* StudyViewController.swift */,
+				03FFADDB2083E67300F976B3 /* AddCardViewController.swift */,
 				03DC5FC3207FE25E00D76DED /* CardSet.swift */,
 				030DF62820703CAE00449B08 /* AppDelegate.swift */,
 				030DF62A20703CAE00449B08 /* ViewController.swift */,
 				030DF62C20703CAE00449B08 /* Main.storyboard */,
+				03FFADDD2083F23600F976B3 /* AddSetViewController.swift */,
 				03DC5FBD207FD07E00D76DED /* SetTitleCell.swift */,
 				03FFADD72082C99900F976B3 /* StudyCollectionViewCell.swift */,
 				030DF62F20703CAE00449B08 /* Assets.xcassets */,
@@ -151,9 +157,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03FFADDC2083E67300F976B3 /* AddCardViewController.swift in Sources */,
 				030DF63D207049A400449B08 /* BrowseViewController.swift in Sources */,
 				030DF62B20703CAE00449B08 /* ViewController.swift in Sources */,
 				03FFADDA2082C9E100F976B3 /* StudyViewController.swift in Sources */,
+				03FFADDE2083F23600F976B3 /* AddSetViewController.swift in Sources */,
 				030DF62920703CAE00449B08 /* AppDelegate.swift in Sources */,
 				03DC5FC4207FE25E00D76DED /* CardSet.swift in Sources */,
 				03FFADD82082C99900F976B3 /* StudyCollectionViewCell.swift in Sources */,

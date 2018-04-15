@@ -74,4 +74,19 @@ class StudyViewController: UIViewController, UICollectionViewDataSource, UIColle
             UIView.transition(with: cell, duration: 0.3 , options: .transitionFlipFromLeft, animations: nil, completion: nil)
         }
     }
+    
+    @IBAction func unwindToStudyFinish(segue: UIStoryboardSegue) {
+        if let origin = segue.source as? AddCardViewController {
+            print("in the unwind function")
+            let cardKey = origin.cardKey
+            let cardValue = origin.cardValue
+            
+            print("key: \(String(describing: cardKey)) value: \(String(describing: cardValue))")
+        }
+    }
+    
+    @IBAction func unwindToStudyCancel(segue: UIStoryboardSegue) {
+        
+    }
+    
 }
