@@ -11,64 +11,69 @@
     </dependencies>
     <scenes>
         <!--Study View Controller-->
-        <scene sceneID="tBd-n0-uvz">
+        <scene sceneID="owB-BK-Qna">
             <objects>
-                <viewController id="RiJ-ry-K9E" customClass="StudyViewController" customModule="SuperFlashcards" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="H6y-RE-8KU">
+                <viewController id="Z5N-Y8-jvo" customClass="StudyViewController" customModule="SuperFlashcards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="gkd-ih-DgJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dxh-Tc-rmB">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oK2-Bf-xts">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="20" id="bri-ca-pkY">
-                                    <size key="itemSize" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="89g-jo-QgD"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="l5d-yF-aE7">
+                                    <size key="itemSize" width="375" height="348"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StudyCell" id="beu-6z-iue" customClass="StudyCollectionViewCell" customModule="SuperFlashcards" customModuleProvider="target">
-                                        <rect key="frame" x="37.5" y="0.0" width="300" height="300"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StudyCell" id="pP8-fx-q5S" customClass="StudyCollectionViewCell" customModule="SuperFlashcards" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="348"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="348"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XD-Bp-uSn">
-                                                    <rect key="frame" x="126" y="138.5" width="48" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8r-IY-6Kl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="328"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <constraints>
-                                            <constraint firstItem="7XD-Bp-uSn" firstAttribute="centerY" secondItem="beu-6z-iue" secondAttribute="centerY" id="0w6-27-K3K"/>
-                                            <constraint firstItem="7XD-Bp-uSn" firstAttribute="centerX" secondItem="beu-6z-iue" secondAttribute="centerX" id="9aC-9l-0rg"/>
-                                        </constraints>
-                                        <size key="customSize" width="300" height="300"/>
                                         <connections>
-                                            <outlet property="cardName" destination="7XD-Bp-uSn" id="ee6-wv-M2T"/>
+                                            <outlet property="key" destination="A8r-IY-6Kl" id="I0g-cB-sOo"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="RiJ-ry-K9E" id="WCF-ds-k5e"/>
+                                    <outlet property="dataSource" destination="Z5N-Y8-jvo" id="5Vs-bU-FPs"/>
+                                    <outlet property="delegate" destination="Z5N-Y8-jvo" id="J7f-PO-sLD"/>
                                 </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="AXQ-G9-UGw"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="oK2-Bf-xts" secondAttribute="bottom" constant="20" symbolic="YES" id="38v-pf-Uza"/>
+                            <constraint firstItem="oK2-Bf-xts" firstAttribute="top" secondItem="1md-nd-5lX" secondAttribute="top" id="UNI-0b-J5a"/>
+                            <constraint firstItem="oK2-Bf-xts" firstAttribute="trailing" secondItem="1md-nd-5lX" secondAttribute="trailing" id="Vw4-PG-Bx0"/>
+                            <constraint firstItem="oK2-Bf-xts" firstAttribute="leading" secondItem="1md-nd-5lX" secondAttribute="leading" id="qe4-g7-vn7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1md-nd-5lX"/>
                     </view>
                     <connections>
-                        <outlet property="studyCollectionView" destination="dxh-Tc-rmB" id="Ck9-g1-xWg"/>
+                        <outlet property="collectionView" destination="oK2-Bf-xts" id="wla-3k-n1G"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UBS-uq-iwX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BTL-V7-zRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31.199999999999999" y="-1084.4077961019491"/>
+            <point key="canvasLocation" x="24.800000000000001" y="-1054.7226386806597"/>
         </scene>
         <!--Browse Flashcards!-->
         <scene sceneID="9mj-Uu-c1Y">
@@ -113,7 +118,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="u6g-fc-WkR" id="ydn-Cl-NIA"/>
-                        <segue destination="RiJ-ry-K9E" kind="show" identifier="BrowseToStudy" id="8ba-gM-J5G"/>
+                        <segue destination="Z5N-Y8-jvo" kind="show" identifier="BrowseToStudy" id="H7u-6O-MCi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1c7-Rb-Uxs" userLabel="First Responder" sceneMemberID="firstResponder"/>

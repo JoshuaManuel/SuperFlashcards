@@ -15,8 +15,8 @@
 		030DF63D207049A400449B08 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030DF63C207049A400449B08 /* BrowseViewController.swift */; };
 		03DC5FBE207FD07E00D76DED /* SetTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC5FBD207FD07E00D76DED /* SetTitleCell.swift */; };
 		03DC5FC4207FE25E00D76DED /* CardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC5FC3207FE25E00D76DED /* CardSet.swift */; };
-		03DC5FD02081569000D76DED /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC5FCF2081569000D76DED /* StudyViewController.swift */; };
-		03DC5FD62081C34100D76DED /* StudyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC5FD52081C34100D76DED /* StudyCollectionViewCell.swift */; };
+		03FFADD82082C99900F976B3 /* StudyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FFADD72082C99900F976B3 /* StudyCollectionViewCell.swift */; };
+		03FFADDA2082C9E100F976B3 /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FFADD92082C9E100F976B3 /* StudyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		030DF63C207049A400449B08 /* BrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
 		03DC5FBD207FD07E00D76DED /* SetTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTitleCell.swift; sourceTree = "<group>"; };
 		03DC5FC3207FE25E00D76DED /* CardSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSet.swift; sourceTree = "<group>"; };
-		03DC5FCF2081569000D76DED /* StudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
-		03DC5FD52081C34100D76DED /* StudyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyCollectionViewCell.swift; sourceTree = "<group>"; };
+		03FFADD72082C99900F976B3 /* StudyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyCollectionViewCell.swift; sourceTree = "<group>"; };
+		03FFADD92082C9E100F976B3 /* StudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,13 +65,13 @@
 			isa = PBXGroup;
 			children = (
 				030DF63C207049A400449B08 /* BrowseViewController.swift */,
-				03DC5FCF2081569000D76DED /* StudyViewController.swift */,
+				03FFADD92082C9E100F976B3 /* StudyViewController.swift */,
 				03DC5FC3207FE25E00D76DED /* CardSet.swift */,
 				030DF62820703CAE00449B08 /* AppDelegate.swift */,
 				030DF62A20703CAE00449B08 /* ViewController.swift */,
 				030DF62C20703CAE00449B08 /* Main.storyboard */,
 				03DC5FBD207FD07E00D76DED /* SetTitleCell.swift */,
-				03DC5FD52081C34100D76DED /* StudyCollectionViewCell.swift */,
+				03FFADD72082C99900F976B3 /* StudyCollectionViewCell.swift */,
 				030DF62F20703CAE00449B08 /* Assets.xcassets */,
 				030DF63120703CAE00449B08 /* LaunchScreen.storyboard */,
 				030DF63420703CAE00449B08 /* Info.plist */,
@@ -153,11 +153,11 @@
 			files = (
 				030DF63D207049A400449B08 /* BrowseViewController.swift in Sources */,
 				030DF62B20703CAE00449B08 /* ViewController.swift in Sources */,
+				03FFADDA2082C9E100F976B3 /* StudyViewController.swift in Sources */,
 				030DF62920703CAE00449B08 /* AppDelegate.swift in Sources */,
 				03DC5FC4207FE25E00D76DED /* CardSet.swift in Sources */,
-				03DC5FD02081569000D76DED /* StudyViewController.swift in Sources */,
+				03FFADD82082C99900F976B3 /* StudyCollectionViewCell.swift in Sources */,
 				03DC5FBE207FD07E00D76DED /* SetTitleCell.swift in Sources */,
-				03DC5FD62081C34100D76DED /* StudyCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

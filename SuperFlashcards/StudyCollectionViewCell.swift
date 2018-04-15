@@ -9,8 +9,5 @@
 import UIKit
 
 class StudyCollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet weak var cardName: UILabel!
-    
+    @IBOutlet weak var key: UILabel!
 }
-
