@@ -19,6 +19,8 @@
 		03FFADDA2082C9E100F976B3 /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FFADD92082C9E100F976B3 /* StudyViewController.swift */; };
 		03FFADDC2083E67300F976B3 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FFADDB2083E67300F976B3 /* AddCardViewController.swift */; };
 		03FFADDE2083F23600F976B3 /* AddSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FFADDD2083F23600F976B3 /* AddSetViewController.swift */; };
+		03FFADE120841F7700F976B3 /* SuperFlashcards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03FFADDF20841F7700F976B3 /* SuperFlashcards.xcdatamodeld */; };
+		03FFADE320843AC600F976B3 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FFADE220843AC600F976B3 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		03FFADD92082C9E100F976B3 /* StudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
 		03FFADDB2083E67300F976B3 /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
 		03FFADDD2083F23600F976B3 /* AddSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSetViewController.swift; sourceTree = "<group>"; };
+		03FFADE020841F7700F976B3 /* SuperFlashcards.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SuperFlashcards.xcdatamodel; sourceTree = "<group>"; };
+		03FFADE220843AC600F976B3 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +72,11 @@
 		030DF62720703CAE00449B08 /* SuperFlashcards */ = {
 			isa = PBXGroup;
 			children = (
+				03FFADDF20841F7700F976B3 /* SuperFlashcards.xcdatamodeld */,
 				030DF63C207049A400449B08 /* BrowseViewController.swift */,
 				03FFADD92082C9E100F976B3 /* StudyViewController.swift */,
 				03FFADDB2083E67300F976B3 /* AddCardViewController.swift */,
+				03FFADE220843AC600F976B3 /* Card.swift */,
 				03DC5FC3207FE25E00D76DED /* CardSet.swift */,
 				030DF62820703CAE00449B08 /* AppDelegate.swift */,
 				030DF62A20703CAE00449B08 /* ViewController.swift */,
@@ -159,6 +165,7 @@
 			files = (
 				03FFADDC2083E67300F976B3 /* AddCardViewController.swift in Sources */,
 				030DF63D207049A400449B08 /* BrowseViewController.swift in Sources */,
+				03FFADE120841F7700F976B3 /* SuperFlashcards.xcdatamodeld in Sources */,
 				030DF62B20703CAE00449B08 /* ViewController.swift in Sources */,
 				03FFADDA2082C9E100F976B3 /* StudyViewController.swift in Sources */,
 				03FFADDE2083F23600F976B3 /* AddSetViewController.swift in Sources */,
@@ -166,6 +173,7 @@
 				03DC5FC4207FE25E00D76DED /* CardSet.swift in Sources */,
 				03FFADD82082C99900F976B3 /* StudyCollectionViewCell.swift in Sources */,
 				03DC5FBE207FD07E00D76DED /* SetTitleCell.swift in Sources */,
+				03FFADE320843AC600F976B3 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +356,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		03FFADDF20841F7700F976B3 /* SuperFlashcards.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				03FFADE020841F7700F976B3 /* SuperFlashcards.xcdatamodel */,
+			);
+			currentVersion = 03FFADE020841F7700F976B3 /* SuperFlashcards.xcdatamodel */;
+			path = SuperFlashcards.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 030DF61D20703CAD00449B08 /* Project object */;
 }

@@ -29,6 +29,8 @@ class AddSetViewController: UIViewController {
         setName = addSetTextField.text!
     }
     
+    
+    
 
     /*
     // MARK: - Navigation

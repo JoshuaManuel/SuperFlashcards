@@ -8,12 +8,14 @@
 
 import UIKit
 
-class AddCardViewController: UIViewController {
+class AddCardViewController: UIViewController, UITextViewDelegate {
     
     var cardKey: String!
     var cardValue: String!
     @IBOutlet weak var cardKeyTextField: UITextField!
     @IBOutlet weak var cardValueTextView: UITextView!
+    
+    let cardValueInitialText = "Enter text here"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,14 @@ class AddCardViewController: UIViewController {
         cardValue = cardValueTextView.text
     }
     
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        if textView.text == cardValueInitialText {
+            print("equals the string")
+            textView.text = ""
+        }
+        
+        return true
+    }
 
     /*
     // MARK: - Navigation

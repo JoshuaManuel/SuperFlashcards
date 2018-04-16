@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class BrowseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -46,10 +47,56 @@ class BrowseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        saveCard(key: "Saved Key", value: "Saved Value")
 
-        // Do any additional setup after loading the view.
+        loadExampleCards()
+        //loadExampleCards()
+        
+    }
+    
+    func saveCard(key: String, value: String) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let newCard = NSEntityDescription.insertNewObject(forEntityName: "Card", into: context)
+        
+        newCard.setValue(key, forKey: "key")
+        newCard.setValue(value, forKey: "value")
+        
+        do {
+            try context.save()
+            print("Save")
+        } catch {
+            //error
+        }
+    }
+    
+    func loadExampleCards() {
+        let entityName = ""
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            let results = try context.fetch(request)
+            
+            if results.count > 0 {
+                for result in results as! [NSManagedObject] {
+                    
+                }
+            }
+        } catch {
+            //Some error
+        }
+    }
+    
+    func loadExampleCardsManually() {
         list.append(CardSet("Astronomy Final"))
-        list[0].addCard(key: "Hello", value: "My Dudes")
+        list[0].addCard(key: "Star", value: "Lol how do you not know what a star is?")
         list[0].addCard(key: "It's such a", value: "beautiful day")
         list.append(CardSet("iOS Programming"))
         list.append(CardSet("Biology Midterm"))
@@ -57,10 +104,16 @@ class BrowseViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     @IBAction func unwindToBrowseFinish(segue: UIStoryboardSegue) {
         if let origin = segue.source as? AddSetViewController {
-            print("in the unwind function")
             let setName = origin.setName
-            // Do something with the data
+
             print (setName!)
+            list.append(CardSet(setName!))
+            
+            tableView.beginUpdates()
+            tableView.insertRows(at: [IndexPath(row: list.count-1, section: 0)], with: .automatic)
+            tableView.endUpdates()
+            
+            
         }
     }
     

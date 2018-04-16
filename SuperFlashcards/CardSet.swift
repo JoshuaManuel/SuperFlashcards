@@ -8,17 +8,6 @@
 
 import Foundation
 
-class Card {
-    var key = ""
-    var value = ""
-    
-    var frontShowing = true
-    
-    init (key: String, value: String) {
-        self.key = key
-        self.value = value
-    }
-}
 class CardSet {
     var name = ""
     
