@@ -46,8 +46,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V11-hD-HZg">
-                                                    <rect key="frame" x="13" y="395" width="45" height="30"/>
-                                                    <state key="normal" title="Delete"/>
+                                                    <rect key="frame" x="23" y="397" width="40" height="28"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <state key="normal" title="Delete">
+                                                        <color key="titleColor" red="1" green="0.0187217119" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="deleteThisCell:" destination="pP8-fx-q5S" eventType="touchUpInside" id="kw7-Wy-Ddo"/>
                                                     </connections>
@@ -55,12 +58,12 @@
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="V11-hD-HZg" firstAttribute="leading" secondItem="pP8-fx-q5S" secondAttribute="leadingMargin" constant="15" id="16d-kV-lAb"/>
                                             <constraint firstItem="A8r-IY-6Kl" firstAttribute="centerX" secondItem="pP8-fx-q5S" secondAttribute="centerX" id="4cx-r4-zgo"/>
                                             <constraint firstItem="A8r-IY-6Kl" firstAttribute="centerY" secondItem="pP8-fx-q5S" secondAttribute="centerY" id="Nth-hd-Ug1"/>
                                             <constraint firstItem="A8r-IY-6Kl" firstAttribute="leading" secondItem="pP8-fx-q5S" secondAttribute="leadingMargin" constant="10" id="Nyc-NL-tAX"/>
                                             <constraint firstItem="A8r-IY-6Kl" firstAttribute="top" secondItem="pP8-fx-q5S" secondAttribute="topMargin" constant="10" id="WOU-Ep-8Hb"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="V11-hD-HZg" secondAttribute="bottom" constant="5" id="YMC-rU-lht"/>
-                                            <constraint firstItem="V11-hD-HZg" firstAttribute="leading" secondItem="pP8-fx-q5S" secondAttribute="leadingMargin" constant="5" id="gEl-Yo-sln"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="A8r-IY-6Kl" secondAttribute="bottom" constant="10" id="p0D-tk-VRc"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="A8r-IY-6Kl" secondAttribute="trailing" constant="10" id="zxS-a2-4dW"/>
                                         </constraints>
@@ -374,7 +377,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEj-aZ-q4f">
-                                <rect key="frame" x="170" y="570" width="34" height="30"/>
+                                <rect key="frame" x="171.5" y="570" width="34" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="euc-gf-lXn"/>
                                 </constraints>
@@ -384,7 +387,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lacava.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dts-w9-S7W">
-                                <rect key="frame" x="108" y="333" width="158" height="156"/>
+                                <rect key="frame" x="108" y="333" width="161" height="156"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joshua Manuel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="au9-JZ-Pi0">
                                 <rect key="frame" x="129" y="289" width="116" height="21"/>
@@ -396,7 +399,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anthony Lacava" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99l-EB-YLV">
-                                <rect key="frame" x="126" y="512" width="122" height="21"/>
+                                <rect key="frame" x="127.5" y="512" width="122" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="LIw-2k-eW7"/>
                                 </constraints>
