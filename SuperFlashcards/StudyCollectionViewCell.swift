@@ -8,6 +8,16 @@
 
 import UIKit
 
+protocol StudyCollectionViewCellDelegate: class  {
+    func deleteCell( cell: StudyCollectionViewCell)
+}
+
 class StudyCollectionViewCell: UICollectionViewCell {
+    
+    weak var delegate: StudyCollectionViewCellDelegate?
+    
     @IBOutlet weak var key: UILabel!
+    @IBAction func deleteThisCell(_ sender: Any) {
+        delegate?.deleteCell(cell: self)
+    }
 }

@@ -6,16 +6,15 @@
 //  Copyright © 2018 Joshua Manuel. All rights reserved.
 //
 
-import Foundation
 
-class Card {
-    var key = ""
-    var value = ""
+import Foundation
+import CoreData
+
+class Card: NSManagedObject {
+    @NSManaged var key: String
+    @NSManaged var value: String
+    @NSManaged var owningSet: CardSet
     
     var frontShowing = true
-    
-    init (key: String, value: String) {
-        self.key = key
-        self.value = value
-    }
 }
+

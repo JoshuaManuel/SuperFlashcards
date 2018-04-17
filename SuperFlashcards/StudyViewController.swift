@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import CoreData
+
 class StudyViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var cardSet: CardSet!
+    var list: [NSManagedObject] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -27,8 +30,10 @@ class StudyViewController: UIViewController, UICollectionViewDataSource, UIColle
         
         // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! StudyCollectionViewCell
+        //indexPath.item
         
-        cell.key.text = self.cardSet.cards[indexPath.item].key
+        cell.key.text = (self.cardSet.cards.allObjects[indexPath.item] as! Card).key
+        cell.delegate = self
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 3.0
         cell.layer.cornerRadius = 3.0
@@ -41,7 +46,7 @@ class StudyViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        flip(card: self.cardSet.cards[indexPath.item], indexPath: indexPath)
+        flip(card: self.cardSet.cards.allObjects[indexPath.item] as! Card, indexPath: indexPath)
     }
     
     func flip(card: Card, indexPath: IndexPath) {
@@ -51,7 +56,7 @@ class StudyViewController: UIViewController, UICollectionViewDataSource, UIColle
             
             let cell = collectionView.cellForItem(at: indexPath) as! StudyCollectionViewCell
 
-            cell.key.text = self.cardSet.cards[indexPath.item].value
+            cell.key.text = (self.cardSet.cards.allObjects[indexPath.item] as! Card).value
             
             UIView.transition(with: cell, duration: 0.3 , options: .transitionFlipFromLeft, animations: nil, completion: nil)
             
@@ -61,20 +66,38 @@ class StudyViewController: UIViewController, UICollectionViewDataSource, UIColle
             
             let cell = collectionView.cellForItem(at: indexPath) as! StudyCollectionViewCell
             
-            cell.key.text = self.cardSet.cards[indexPath.item].key
+            cell.key.text = (self.cardSet.cards.allObjects[indexPath.item] as! Card).key
             
             UIView.transition(with: cell, duration: 0.3 , options: .transitionFlipFromLeft, animations: nil, completion: nil)
         }
     }
     
     @IBAction func unwindToStudyFinish(segue: UIStoryboardSegue) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
         if let origin = segue.source as? AddCardViewController {
             let cardKey = origin.cardKey!
             let cardValue = origin.cardValue!
             
-            cardSet.addCard(key: cardKey, value: cardValue)
+            let entity = NSEntityDescription.entity(forEntityName: "Card", in: context)!
             
-            collectionView.insertItems(at: [IndexPath(row: cardSet.cards.count-1, section: 0)])
+            let cardToAdd = Card(entity: entity, insertInto: context)
+            
+            cardToAdd.key = cardKey
+            cardToAdd.value = cardValue
+            cardToAdd.owningSet = cardSet
+            
+            do {
+                try context.save()
+                collectionView.insertItems(at: [IndexPath(row: cardSet.cards.count-1, section: 0)])
+            } catch let err as NSError {
+                print("Failed to save the item", err)
+            }
+            
+            //cardSet.addCard(key: cardKey, value: cardValue)
+            
+            
             
             //print("key: \(String(describing: cardKey)) value: \(String(describing: cardValue))")
         }
@@ -83,5 +106,25 @@ class StudyViewController: UIViewController, UICollectionViewDataSource, UIColle
     @IBAction func unwindToStudyCancel(segue: UIStoryboardSegue) {
         
     }
-    
+}
+
+extension StudyViewController: StudyCollectionViewCellDelegate {
+    func deleteCell(cell: StudyCollectionViewCell) {
+        if let indexPath = collectionView.indexPath(for: cell) {
+            //Delete from CoreData
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
+            let context = appDelegate.persistentContainer.viewContext
+            
+            context.delete(self.cardSet.cards.allObjects[indexPath.item] as! NSManagedObject)
+            
+            do {
+                try context.save()
+            } catch {
+                
+            }
+            
+            //Delete from collectionView
+            collectionView.deleteItems(at: [indexPath])
+        }
+    }
 }

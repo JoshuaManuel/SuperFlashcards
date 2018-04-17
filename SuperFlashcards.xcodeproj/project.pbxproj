@@ -13,6 +13,9 @@
 		030DF63020703CAE00449B08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030DF62F20703CAE00449B08 /* Assets.xcassets */; };
 		030DF63320703CAE00449B08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030DF63120703CAE00449B08 /* LaunchScreen.storyboard */; };
 		030DF63D207049A400449B08 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030DF63C207049A400449B08 /* BrowseViewController.swift */; };
+		03D9BBD32086731C009DFA09 /* manuel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03D9BBD12086731C009DFA09 /* manuel.jpg */; };
+		03D9BBD42086731C009DFA09 /* lacava.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03D9BBD22086731C009DFA09 /* lacava.jpg */; };
+		03D9BBD620868095009DFA09 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 03D9BBD520868095009DFA09 /* AppIcon.appiconset */; };
 		03DC5FBE207FD07E00D76DED /* SetTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC5FBD207FD07E00D76DED /* SetTitleCell.swift */; };
 		03DC5FC4207FE25E00D76DED /* CardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC5FC3207FE25E00D76DED /* CardSet.swift */; };
 		03FFADD82082C99900F976B3 /* StudyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FFADD72082C99900F976B3 /* StudyCollectionViewCell.swift */; };
@@ -32,6 +35,9 @@
 		030DF63220703CAE00449B08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		030DF63420703CAE00449B08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		030DF63C207049A400449B08 /* BrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
+		03D9BBD12086731C009DFA09 /* manuel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = manuel.jpg; sourceTree = "<group>"; };
+		03D9BBD22086731C009DFA09 /* lacava.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lacava.jpg; sourceTree = "<group>"; };
+		03D9BBD520868095009DFA09 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
 		03DC5FBD207FD07E00D76DED /* SetTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTitleCell.swift; sourceTree = "<group>"; };
 		03DC5FC3207FE25E00D76DED /* CardSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSet.swift; sourceTree = "<group>"; };
 		03FFADD72082C99900F976B3 /* StudyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -81,9 +87,12 @@
 				030DF62820703CAE00449B08 /* AppDelegate.swift */,
 				030DF62A20703CAE00449B08 /* ViewController.swift */,
 				030DF62C20703CAE00449B08 /* Main.storyboard */,
+				03D9BBD22086731C009DFA09 /* lacava.jpg */,
+				03D9BBD12086731C009DFA09 /* manuel.jpg */,
 				03FFADDD2083F23600F976B3 /* AddSetViewController.swift */,
 				03DC5FBD207FD07E00D76DED /* SetTitleCell.swift */,
 				03FFADD72082C99900F976B3 /* StudyCollectionViewCell.swift */,
+				03D9BBD520868095009DFA09 /* AppIcon.appiconset */,
 				030DF62F20703CAE00449B08 /* Assets.xcassets */,
 				030DF63120703CAE00449B08 /* LaunchScreen.storyboard */,
 				030DF63420703CAE00449B08 /* Info.plist */,
@@ -152,7 +161,10 @@
 			files = (
 				030DF63320703CAE00449B08 /* LaunchScreen.storyboard in Resources */,
 				030DF63020703CAE00449B08 /* Assets.xcassets in Resources */,
+				03D9BBD42086731C009DFA09 /* lacava.jpg in Resources */,
 				030DF62E20703CAE00449B08 /* Main.storyboard in Resources */,
+				03D9BBD620868095009DFA09 /* AppIcon.appiconset in Resources */,
+				03D9BBD32086731C009DFA09 /* manuel.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +321,7 @@
 		030DF63820703CAE00449B08 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SuperFlashcards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -323,7 +335,7 @@
 		030DF63920703CAE00449B08 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SuperFlashcards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
